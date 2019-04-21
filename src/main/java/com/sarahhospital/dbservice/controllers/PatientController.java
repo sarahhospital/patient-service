@@ -1,11 +1,15 @@
 package com.sarahhospital.dbservice.controllers;
 
-import com.sarahhospital.dbservice.controllers.model.Person;
+import com.sarahhospital.dbservice.entities.Patient;
+import com.sarahhospital.dbservice.model.HumanName;
+import com.sarahhospital.dbservice.model.Person;
 import com.sarahhospital.dbservice.services.PatientService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@RequestMapping("/patient")
 public class PatientController {
 
     private PatientService patientService;
@@ -14,10 +18,28 @@ public class PatientController {
         this.patientService = patientService;
     }
 
-    @GetMapping("/person")
-    public Person getPersonName(){
-        String name = patientService.getAllPatients().get(0).getName();
-        return new Person(name);
+    @GetMapping("/{id}")
+    public Patient getPatientById(@PathVariable Integer id) {
+            return patientService.findPatientById(id);
     }
 
+    @GetMapping("/given/patronymic/family")
+    public Patient getPatientByName(@RequestParam String given, @RequestParam String patronymic, @RequestParam String family){
+        return patientService.findPatientByName(new HumanName(given, patronymic, family));
+    }
+
+    @GetMapping("/all")
+    public List<Patient> getAllPatients(){
+        return patientService.getAllPatients();
+    }
+
+    @PutMapping("/update")
+    public Integer updatePatient(@RequestParam Patient patient){
+        return patientService.updatePatient(patient);
+    }
+
+    @PostMapping("/create")
+    public Integer createPatient(@RequestParam Patient patient){
+        return patientService.createPatient(patient);
+    }
 }

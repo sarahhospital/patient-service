@@ -1,4 +1,4 @@
-package com.sarahhospital.dbservice.controllers.model;
+package com.sarahhospital.dbservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
