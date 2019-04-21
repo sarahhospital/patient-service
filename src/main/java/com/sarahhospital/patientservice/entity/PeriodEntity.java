@@ -7,7 +7,7 @@ import javax.persistence.Embeddable;
 
 @Data
 @Embeddable
-public class Period {
+public class PeriodEntity {
 
     @Column(name = "start_date_time")
     private Long start;

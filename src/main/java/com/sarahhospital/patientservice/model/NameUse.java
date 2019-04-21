@@ -1,5 +1,5 @@
 package com.sarahhospital.patientservice.model;
 
-public enum NameCode {
+public enum NameUse {
     USUAL, OFFICIAL, TEMP, NICKNAME, ANONYMOUS, OLD, MAIDEN
 }

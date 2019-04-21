@@ -1,13 +1,13 @@
 package com.sarahhospital.patientservice.repository;
 
-import com.sarahhospital.patientservice.entity.Patient;
+import com.sarahhospital.patientservice.entity.PatientEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface PatientRepository extends JpaRepository<Patient, Integer> {
+public interface PatientRepository extends JpaRepository<PatientEntity, Integer> {
 
-    List<Patient> findAll();
+    List<PatientEntity> findAll();
 }

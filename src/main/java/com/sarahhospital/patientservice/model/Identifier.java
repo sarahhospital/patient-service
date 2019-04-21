@@ -1,15 +1,11 @@
 package com.sarahhospital.patientservice.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Identifier {
 
-    private IdentifierCode use;
+    private IdentifierUse use;
 
     private IdentifierType type;
 

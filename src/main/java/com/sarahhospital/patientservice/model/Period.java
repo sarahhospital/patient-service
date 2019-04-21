@@ -6,5 +6,6 @@ import lombok.Data;
 public class Period {
 
     private Long start;
+
     private Long end;
 }

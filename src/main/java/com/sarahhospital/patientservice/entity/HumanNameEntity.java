@@ -1,6 +1,5 @@
 package com.sarahhospital.patientservice.entity;
 
-import com.sarahhospital.patientservice.model.NameCode;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -17,11 +16,11 @@ public class HumanNameEntity {
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
-    private Patient patient;
+    private PatientEntity patient;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "use")
-    private NameCode use;
+    private NameUsePersistent use;
 
     @Column(name = "first_name")
     private String firstName;
@@ -34,7 +33,7 @@ public class HumanNameEntity {
 
     @Embedded
     @Column(name = "period")
-    private Period period;
+    private PeriodEntity periodEntity;
 }
 
 

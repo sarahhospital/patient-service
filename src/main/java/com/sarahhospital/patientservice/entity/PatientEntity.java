@@ -1,20 +1,14 @@
 package com.sarahhospital.patientservice.entity;
 
-import com.sarahhospital.patientservice.model.GenderCode;
-import com.sarahhospital.patientservice.model.HumanName;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "patient")
-public class Patient {
+public class PatientEntity {
 
     @Id
     @Column(name = "id")
@@ -24,12 +18,12 @@ public class Patient {
     @Column(name = "active")
     private Boolean active;
 
-    @OneToMany
+    @OneToMany(mappedBy = "patient", fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<HumanNameEntity> humanNames;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "gender")
-    private GenderCode gender;
+    private GenderPersistent gender;
 
     @Column(name = "birthDate", length = 8)
     private String birthDate;

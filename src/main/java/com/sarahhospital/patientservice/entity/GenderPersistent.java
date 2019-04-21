@@ -1,5 +1,5 @@
 package com.sarahhospital.patientservice.entity;
 
-public enum GenderCode {
+public enum GenderPersistent {
     MALE, FEMALE, OTHER, UNKNOWN
 }

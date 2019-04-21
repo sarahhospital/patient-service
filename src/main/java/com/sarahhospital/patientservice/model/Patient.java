@@ -1,23 +1,19 @@
 package com.sarahhospital.patientservice.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Patient {
 
-    private List<Identifier> identifier;
+    private List<Identifier> identifiers;
 
     private Boolean active;
 
     private List<HumanName> humanNames;
 
-    private GenderCode gender;
+    private Gender gender;
 
     private String birthDate;
 }

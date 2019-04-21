@@ -1,5 +1,5 @@
 package com.sarahhospital.patientservice.model;
 
-public enum IdentifierCode {
+public enum IdentifierUse {
     USUAL, OFFICIAL, TEMP, SECONDARY
 }
