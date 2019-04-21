@@ -1,13 +1,12 @@
-package com.sarahhospital.dbservice.services;
+package com.sarahhospital.patientservice.services;
 
-import com.sarahhospital.dbservice.exceptions.NoSuchPatientException;
-import com.sarahhospital.dbservice.model.HumanName;
-import com.sarahhospital.dbservice.repository.PatientRepository;
-import com.sarahhospital.dbservice.entities.Patient;
+import com.sarahhospital.patientservice.exceptions.NoSuchPatientException;
+import com.sarahhospital.patientservice.model.HumanName;
+import com.sarahhospital.patientservice.repository.PatientRepository;
+import com.sarahhospital.patientservice.entities.Patient;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class PatientService {

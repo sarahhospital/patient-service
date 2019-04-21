@@ -1,4 +1,4 @@
-package com.sarahhospital.dbservice.model;
+package com.sarahhospital.patientservice.model;
 
 import lombok.Data;
 

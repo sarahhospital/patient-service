@@ -1,16 +1,16 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: dbservice
+  name: patientservice
 spec:
   template:
     metadata:
       labels:
-        app: dbservice
+        app: patientservice
     spec:
       containers:
-        - name: dbservice
-          image: dbservice
+        - name: patientservice
+          image: patientservice
           imagePullPolicy: "Never"
           ports:
             - containerPort: 8080
@@ -18,7 +18,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dbservice
+  name: patientservice
 spec:
   type: NodePort
   ports:
@@ -26,4 +26,4 @@ spec:
       port: 8080
       protocol: TCP
   selector:
-    app: dbservice
+    app: patientservice

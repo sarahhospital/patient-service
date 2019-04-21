@@ -1,11 +1,12 @@
-package com.sarahhospital.dbservice.model;
+package com.sarahhospital.patientservice.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import javax.persistence.Embeddable;
-
-@Embeddable
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class HumanName {
 
     public HumanName(String given, String patronymic, String family) {
@@ -14,7 +15,7 @@ public class HumanName {
         this.given = given;
     }
 
-    private NameCode code;
+    private NameCode use;
 
     private String text;
 
@@ -23,10 +24,6 @@ public class HumanName {
     private String patronymic;
 
     private String given;
-
-    private String prefix;
-
-    private String suffix;
 
     private Period period;
 }

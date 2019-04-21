@@ -1,13 +1,13 @@
-package com.sarahhospital.dbservice;
+package com.sarahhospital.patientservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DbserviceApplication {
+public class PatientServiceApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DbserviceApplication.class, args);
+        SpringApplication.run(PatientServiceApplication.class, args);
     }
 
 }

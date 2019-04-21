@@ -1,4 +1,4 @@
-package com.sarahhospital.dbservice.controllers;
+package com.sarahhospital.patientservice.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

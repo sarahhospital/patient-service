@@ -1,4 +1,4 @@
-package com.sarahhospital.dbservice;
+package com.sarahhospital.patientservice;
 
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;

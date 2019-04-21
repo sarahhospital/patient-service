@@ -1,4 +1,4 @@
-package com.sarahhospital.dbservice.exceptions;
+package com.sarahhospital.patientservice.exceptions;
 
 public class NoSuchPatientException extends RuntimeException {
 

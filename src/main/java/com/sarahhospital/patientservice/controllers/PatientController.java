@@ -1,9 +1,8 @@
-package com.sarahhospital.dbservice.controllers;
+package com.sarahhospital.patientservice.controllers;
 
-import com.sarahhospital.dbservice.entities.Patient;
-import com.sarahhospital.dbservice.model.HumanName;
-import com.sarahhospital.dbservice.model.Person;
-import com.sarahhospital.dbservice.services.PatientService;
+import com.sarahhospital.patientservice.entities.Patient;
+import com.sarahhospital.patientservice.model.HumanName;
+import com.sarahhospital.patientservice.services.PatientService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

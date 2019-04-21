@@ -1,7 +1,7 @@
-package com.sarahhospital.dbservice.repository;
+package com.sarahhospital.patientservice.repository;
 
-import com.sarahhospital.dbservice.entities.Patient;
-import com.sarahhospital.dbservice.model.HumanName;
+import com.sarahhospital.patientservice.entities.Patient;
+import com.sarahhospital.patientservice.model.HumanName;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
