@@ -1,4 +1,4 @@
-package com.sarahhospital.patientservice.entities;
+package com.sarahhospital.patientservice.entity;
 
 import lombok.Data;
 

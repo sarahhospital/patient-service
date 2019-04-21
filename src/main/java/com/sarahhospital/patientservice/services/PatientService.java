@@ -3,7 +3,7 @@ package com.sarahhospital.patientservice.services;
 import com.sarahhospital.patientservice.exceptions.NoSuchPatientException;
 import com.sarahhospital.patientservice.model.HumanName;
 import com.sarahhospital.patientservice.repository.PatientRepository;
-import com.sarahhospital.patientservice.entities.Patient;
+import com.sarahhospital.patientservice.entity.Patient;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -29,15 +29,15 @@ public class PatientService {
         return patientRepository.findById(id).orElseThrow(() -> new NoSuchPatientException("There is no patient with such id"));
     }
 
-    public Integer createPatient(Patient patient){
+    public Long createPatient(Patient patient){
         return patientRepository.save(patient).getId();
     }
 
-    public Integer updatePatient(Patient patient) throws RuntimeException{
+    public Long updatePatient(Patient patient) {
         return patientRepository.save(patient).getId();
     }
 
-    public void delete(Patient patient) throws RuntimeException{
+    public void delete(Patient patient) {
         patientRepository.delete(patient);
     }
 }

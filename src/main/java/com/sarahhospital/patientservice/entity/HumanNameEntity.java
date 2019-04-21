@@ -1,4 +1,4 @@
-package com.sarahhospital.patientservice.entities;
+package com.sarahhospital.patientservice.entity;
 
 import com.sarahhospital.patientservice.model.NameCode;
 import com.sarahhospital.patientservice.model.Period;

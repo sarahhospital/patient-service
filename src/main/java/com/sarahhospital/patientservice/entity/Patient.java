@@ -1,8 +1,7 @@
-package com.sarahhospital.patientservice.entities;
+package com.sarahhospital.patientservice.entity;
 
 import com.sarahhospital.patientservice.model.GenderCode;
 import com.sarahhospital.patientservice.model.HumanName;
-import com.sarahhospital.patientservice.model.Identifier;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,9 +20,6 @@ public class Patient {
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
-
-    @OneToMany
-    private List<Identifier> identifier;
 
     @Column(name = "active")
     private Boolean active;

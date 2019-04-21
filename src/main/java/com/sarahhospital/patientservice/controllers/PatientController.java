@@ -1,6 +1,6 @@
 package com.sarahhospital.patientservice.controllers;
 
-import com.sarahhospital.patientservice.entities.Patient;
+import com.sarahhospital.patientservice.entity.Patient;
 import com.sarahhospital.patientservice.model.HumanName;
 import com.sarahhospital.patientservice.services.PatientService;
 import org.springframework.web.bind.annotation.*;
@@ -33,12 +33,12 @@ public class PatientController {
     }
 
     @PutMapping("/update")
-    public Integer updatePatient(@RequestParam Patient patient){
+    public Long updatePatient(@RequestParam Patient patient){
         return patientService.updatePatient(patient);
     }
 
     @PostMapping("/create")
-    public Integer createPatient(@RequestParam Patient patient){
+    public Long createPatient(@RequestParam Patient patient){
         return patientService.createPatient(patient);
     }
 }
