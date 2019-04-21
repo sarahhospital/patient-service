@@ -25,7 +25,7 @@ public class Patient {
     private Boolean active;
 
     @OneToMany
-    private List<HumanName> humanNames;
+    private List<HumanNameEntity> humanNames;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "gender")

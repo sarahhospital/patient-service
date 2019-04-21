@@ -19,26 +19,26 @@ public class PatientController {
 
     @GetMapping("/{id}")
     public Patient getPatientById(@PathVariable Integer id) {
-            return patientService.findPatientById(id);
+        return patientService.findPatientById(id);
     }
 
     @GetMapping("/given/patronymic/family")
-    public Patient getPatientByName(@RequestParam String given, @RequestParam String patronymic, @RequestParam String family){
+    public List<Patient> getPatientByName(@RequestParam String given, @RequestParam String patronymic, @RequestParam String family) {
         return patientService.findPatientByName(new HumanName(given, patronymic, family));
     }
 
     @GetMapping("/all")
-    public List<Patient> getAllPatients(){
+    public List<Patient> getAllPatients() {
         return patientService.getAllPatients();
     }
 
     @PutMapping("/update")
-    public Long updatePatient(@RequestParam Patient patient){
+    public Long updatePatient(@RequestParam Patient patient) {
         return patientService.updatePatient(patient);
     }
 
     @PostMapping("/create")
-    public Long createPatient(@RequestParam Patient patient){
+    public Long createPatient(@RequestParam Patient patient) {
         return patientService.createPatient(patient);
     }
 }
